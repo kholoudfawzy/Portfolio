@@ -182,10 +182,10 @@ nav.main-navbar.scrolled {
   background-image: url(./assets/img/BG3.png);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height:100dvh;
   display:flex;
   align-items:center;
-  padding:120px 20px 40px;
+  padding:120px 20px 80px;
 }
 
 .banner-row{
@@ -200,19 +200,19 @@ nav.main-navbar.scrolled {
   align-items: flex-start;
 }
 .banner .tagline {
-  width: max-content;
+  /* width: auto; */
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(247, 145, 77, 0.582) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(247, 145, 77, 0.6) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 20px;
+  font-size: clamp(14px,4vw,20px);
   margin-bottom: 16px;
   display: inline-block;
 }
 
 .banner h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem,5vw,4rem);
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1;
@@ -222,6 +222,7 @@ nav.main-navbar.scrolled {
 
 .typing-text {
   display: inline-block;
+  min-width:240px;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -357,7 +358,7 @@ nav.main-navbar.scrolled {
   padding: 17px 0;
   color: #fff;
   width: 100%;
-  font-size: 17px;
+  font-size: clamp(14px, 2vw, 17px);
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
@@ -935,22 +936,30 @@ nav.main-navbar.scrolled {
 /*            //// Responsive Styles //// */
 @media (max-width: 1200px) {
   .banner { padding:110px 20px 35px; }
+  .typing-text{ 
+    display: inline-block;
+    min-width:400px;
+  }
 }
 
 @media (max-width: 992px) {
   /*  Banner  */
   .banner {
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 100px 20px 30px;
   }
   .banner p {
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 0;
   }
   .banner-row { margin-bottom: 0px; }
   .banner-txt {
     width: 100%;
     margin-bottom: 0px;
+  }
+  .typing-text{ 
+    display: inline-block;
+    min-width:270px;
   }
 
   /*  Navbar  */
@@ -964,22 +973,47 @@ nav.main-navbar.scrolled {
 
 @media (max-width: 768px) {
   /*  Banner  */
-  .banner { padding: 100px 15px 30px; }
+  .banner { 
+    padding: 100px 15px 30px; 
+  }
+  .banner .container{
+    padding-inline:20px;
+  }
   .banner-row 
   {
-    width: 100%;
-    height: auto;
     justify-content: center;
     align-items: center;
-    padding: 30px 10px;
+    padding: 30px 0;
+    --bs-gutter-x:0;
   }
-  .banner-txt { height: 50vh; }
-  .banner .tagline { align-self: center; }
-  .banner p { width: 100%; }
-  .banner button { margin: 24px; }
+  .banner-txt { 
+    min-height: 60dvh;
+    height: auto;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    padding: 24px 18px;
+    border-radius: 12px;
+    width:100%;
+    max-width:520px;
+    margin-inline:auto;
+    align-items:center;
+    text-align:center;
+  }
+  .banner h2{
+  width:100%;
+  }
+  .banner p { max-width: 100%; }
+  .banner button { 
+    margin: 24px 5px 0;
+    /* align-self: flex-start; */
+  }
   .banner-animation{
-    margin: 0;
+    margin: 0 auto 20px;
     padding: 0;
+  }
+  .typing-text{ 
+    display: inline-block;
+    min-width:190px;
   }
   .banner .lotti{
     width:85%;
@@ -1017,39 +1051,22 @@ nav.main-navbar.scrolled {
   /*  Email  */
   .email-bx { padding: 60px 30px; }
 }
+
+@media(max-width:400px){
+.banner h2{
+  font-size:2rem;
+}
+.banner p{
+  font-size:15px;
+}
+.tagline{
+  font-size:14px;
+}
+.typing-text{
+  min-width:165px;
+}
+.banner button{
+  font-size:18px;
+}
+}
 /* ///////////////////////////////////////////////////////// */
-/* background: linear-gradient(90deg, #c084fc, #e879f9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-    /* .email-section {
-    background-image: url('./assets/img/footer-bg.png');
-    background-position: center center;
-    background-size: cover;
-    padding: 80px 5%;
-} */
-
-/* Email Box - الكارد الأبيض */
-/* .email-bx {
-    background: #FFFFFF;
-    border-radius: 55px;
-    color: #121212;
-    padding: 60px 80px;
-} */
-
-/* Footer */
-/* .footer {
-    background-image: url('./assets/img/footer-bg.png');
-    background-position: center bottom;
-    background-size: cover;
-    padding: 40px 0 20px;
-} */
- /* .project-desc {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
-} */

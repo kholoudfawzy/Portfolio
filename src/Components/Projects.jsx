@@ -29,8 +29,8 @@ const projects = [
     description: 'My Portfolio - Personal portfolio, React.js',
     imgUrl1: proj6Img1,
     imgUrl2: proj6Img2,
-    githubLink: '',
-    demoLink: '',
+    githubLink: 'https://github.com/kholoudfawzy/Portfolio.git',
+    demoLink: 'https://portfolio-two-cyan-72.vercel.app/',
   },
   {
     title: 'Landing Page',

@@ -4,12 +4,12 @@ import { FiArrowRightCircle } from 'react-icons/fi';
 import Lottie from 'lottie-react';
 import Astronaut from '../assets/img/Astronuat.json';
 
-const profileRoles = [' Front-End Developer', ' React Developer', ' Node.js Developer'];
+const profileRoles = ['Front-End Developer', 'React Developer', 'JavaScript Developer'];
 
 const Banner = () => {
   const scrollToContact = () => {
     const projectsSection = document.getElementById('projects');
-    const contactTab = document.getElementById('projects-tabs-tab-third');
+    const contactTab = document.getElementById('projects-tabs-tab-contactTab');
 
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -25,7 +25,7 @@ const Banner = () => {
       <Container>
         <Row className="banner-row align-items-center flex-column flex-md-row">
           <Col xs={12} md={7} xl={7} className="banner-txt text-center text-md-start">
-            <span className="tagline">Welcome All In My Portfolio</span>
+            <span className="tagline">Welcome to My Portfolio</span>
             <h2 className="hero-title">
               Hi! I&apos;m Kholoud Fawzy,&nbsp;
               <span className="typing-text">
