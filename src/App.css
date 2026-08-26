@@ -212,7 +212,8 @@ nav.main-navbar.scrolled {
 }
 
 .banner h2 {
-  font-size: clamp(2rem,5vw,4rem);
+  font-size: clamp(1.9rem,4vw,3.3rem);
+  min-height: 2.6em;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1;
@@ -221,8 +222,10 @@ nav.main-navbar.scrolled {
 }
 
 .typing-text {
-  display: inline-block;
-  min-width:240px;
+  display: inline-flex;
+  min-width:250px;
+  justify-content: center;
+  align-items: center;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -232,7 +235,7 @@ nav.main-navbar.scrolled {
   max-width: 600px;
   color: #b8b8b8;
   /* B8B8B8 */
-  font-size: 18px;
+  font-size: clamp(1rem,1.5vw,1.1rem);
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
@@ -241,7 +244,7 @@ nav.main-navbar.scrolled {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 40px;
+  margin: 40px 0 30px;
   letter-spacing: 0.8px;
   display: inline-flex;
   gap: 8px;
